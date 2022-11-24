@@ -4,6 +4,8 @@ import { DatosAnimalesService } from '../../Services/datos-animales.service';
 
 declare var $: any;
 declare var AOS: any;
+
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -54,6 +56,7 @@ export class InicioComponent implements OnInit {
 	    easing: 'ease-in-out'
     });
 
+    
     
   }
 

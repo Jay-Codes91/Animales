@@ -28,6 +28,7 @@ import { Pagina404Component } from './Components/pagina404/pagina404.component';
 import { AnimalComponent } from './Components/tipos-animales/animal/animal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AveComponent } from './Components/tipos-animales/aves/ave/ave.component';
 import { InsectoComponent } from './Components/tipos-animales/insectos/insecto/insecto.component';
 import { PezComponent } from './Components/tipos-animales/peces/pez/pez.component';
@@ -82,7 +83,8 @@ import { FooterComponent } from './Components/root/footer/footer.component';
     MatAutocompleteModule,
     MatDialogModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [DatosAnimalesService],
   bootstrap: [AppComponent]
