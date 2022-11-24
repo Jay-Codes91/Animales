@@ -1,0 +1,129 @@
+<br>
+<h1 id="titulo" class="lobs titulo mat-display-2 mat-typography">Tipos de animales</h1>
+<br><br>
+<div id="contenedor">
+  <mat-tab-group animationDuration="0ms" mat-stretch-tabs class="tabanimales bg-white mat-elevation-z4">
+    
+    <mat-tab label="Mamíferos" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Mamíferos</h1>
+      <p>{{animales[0].mamiferos}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{mamiferos[0].IMG}}" alt="{{mamiferos[0].nombre}}"></div>
+        <div><img src="{{mamiferos[1].IMG}}" alt="{{mamiferos[1].nombre}}"></div>
+        <div><img src="{{mamiferos[2].IMG}}" alt="{{mamiferos[2].nombre}}"></div>
+        
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Aves" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Aves</h1>
+      <p>{{animales[1].aves}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{aves[0].IMG}}" loading="lazy" alt="{{aves[0].nombre}}"></div>
+        <div><img src="{{aves[1].IMG}}" loading="lazy" alt="{{aves[1].nombre}}"></div>
+        <div><img src="{{aves[2].IMG}}" loading="lazy" alt="{{aves[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Reptiles" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Reptiles</h1>
+      <p>{{animales[2].reptiles}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{reptiles[0].IMG}}" loading="lazy" alt="{{reptiles[0].nombre}}"></div>
+        <div><img src="{{reptiles[1].IMG}}" loading="lazy" alt="{{reptiles[1].nombre}}"></div>
+        <div><img src="{{reptiles[2].IMG}}" loading="lazy" alt="{{reptiles[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Insectos" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Insectos</h1>
+      <p>{{animales[4].insectos}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{insectos[0].IMG}}" loading="lazy" alt="{{insectos[0].nombre}}"></div>
+        <div><img src="{{insectos[1].IMG}}" loading="lazy" alt="{{insectos[1].nombre}}"></div>
+        <div><img src="{{insectos[2].IMG}}" loading="lazy" alt="{{insectos[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Peces" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Peces</h1>
+      <p>{{animales[3].peces}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{peces[0].IMG}}" loading="lazy" alt="{{peces[0].nombre}}"></div>
+        <div><img src="{{peces[1].IMG}}" loading="lazy" alt="{{peces[1].nombre}}"></div>
+        <div><img src="{{peces[2].IMG}}" loading="lazy" alt="{{peces[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Anfibios" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Anfibios</h1>
+      <p>{{animales[5].anfibios}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{anfibios[0].IMG}}" loading="lazy" alt="{{anfibios[0].nombre}}"></div>
+        <div><img src="{{anfibios[1].IMG}}" loading="lazy" alt="{{anfibios[1].nombre}}"></div>
+        <div><img src="{{anfibios[2].IMG}}" loading="lazy" alt="{{anfibios[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Crustaceos" class="mats-tab">
+      <h1 class="lobs mat-display-1 text-center mat-typography">Crustáceos</h1>
+      <p>{{animales[6].crustaceos}}</p>
+      <h2 class="lobs mat-display-1 mat-typography">Fotos</h2>
+      <div id="fotos">
+        <div><img src="{{crustaceos[0].IMG}}" loading="lazy" alt="{{crustaceos[0].nombre}}"></div>
+        <div><img src="{{crustaceos[1].IMG}}" loading="lazy" alt="{{crustaceos[1].nombre}}"></div>
+        <div><img src="{{crustaceos[2].IMG}}" loading="lazy" alt="{{crustaceos[2].nombre}}"></div>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
+<br>
+
+<!----------------------------------------------------------------------------------------->
+<div class="text-center">
+  <button class="btnOcultar btn btn-info" type="button" (click)="mostrarContenido=!mostrarContenido">{{mostrarContenido ? 'Ocultar Animales': 'Mostrar todos los animales'}}</button>
+</div>
+<br>
+
+<div *ngIf="mostrarContenido" class="contenedorB justify-content-center">
+  <!--<mat-form-field class="buscador bg-light " appearance="outline">
+    <mat-label>Buscar animal</mat-label>
+    <input name="buscar" matInput placeholder="Ej, Elefante, cucaracha..." [(ngModel)]="buscar">
+  </mat-form-field>-->
+  <div class="buscador form-floating">
+    <input type="text" name="buscar" id="buscador" class="form-control" placeholder="ex. mapache, cucaracha" [(ngModel)]="buscar">
+    <label for="buscador">Buscar animal</label>
+  </div>
+</div>
+
+
+<div *ngIf="mostrarContenido" id="contenedor2" class="container-fluid p-0 m-0">
+ 
+  <div class="card m-2" *ngFor="let animales of todosAnimales | buscar: buscar; index as i">
+    <div class="card-header bg-success">
+      <div class="d-flex">
+         <img class="rounded-circle img-fluid" src="{{animales.IMG}}" alt="{{animales.nombre}}" style="width: 50px; height: 50px;">
+         <h2 class="lobs align-self-center justify-self-center text-white mat-typography" style="margin-left: 20px;">{{animales.nombre}}</h2>
+      </div>
+    </div>
+    <div>
+      <img class="card-img img-fluid" loading="lazy" src="{{animales.IMG}}" alt="{{animales.nombre}}">
+    </div>
+    
+    <div class="card-body bg-success">
+        <h3 style="font-style: italic; font-weight: lighter; color: #ffffff;" >{{animales.nombreCientifico}}</h3>
+        <h3 class=" card-text mt-3"><b>Clase: </b>{{animales.clase}}</h3> 
+        <div class="text-center">
+          <button class="btn btn-info" type="button" (click)="descripcion(animales.nombre, animales.descripcion, animales.IMG)">Descripcion</button>
+        </div>
+    </div>
+</div>
+  
+</div>

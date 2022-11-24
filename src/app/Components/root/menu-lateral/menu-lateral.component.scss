@@ -1,0 +1,46 @@
+@import "src/app/app.component.scss";
+
+#slideNav{ 
+    #header2{
+        @include fondoHeader();
+        #encabezado-logo-2{
+            @include cajaLogo();
+            h1{
+                @include cajaLogo-h1();
+            }
+
+            h4{
+                @include cajaLogo-h4();
+            }
+        }
+    }
+    
+    #nav{
+        background: #D3CCE3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+       #navegacion-2{
+
+        li{
+            border-bottom: 1px solid $coloNegro;
+            padding: 10px;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.2);
+                
+            }
+        }
+
+        a{
+            color: #000000;
+            margin-left: 20px;
+            font-size: 20px;
+            &:hover{
+                color: #FDFEFE;
+            }
+           
+        }
+
+    } 
+    }
+    
+}

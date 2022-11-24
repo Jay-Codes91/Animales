@@ -1,0 +1,45 @@
+$sombraLogo: 3px 7px 3px #585957;
+$colorAlmendra: #ffffff;
+$coloNegro: #000000;
+
+.lobs{
+    font-family: 'Lobster Two', cursive;
+}
+
+@mixin cajaLogo {
+  max-width: max-content;
+  padding: 10px;
+  height: auto;
+  //border: 2px solid $coloNegro;
+  display: flex;
+  margin-top: 5px;
+}
+
+@mixin cajaLogo-h1 {
+  font-size: 70px;
+  color: #476e25;
+  text-shadow: $sombraLogo;
+}
+
+@mixin cajaLogo-h4 {
+    font-size: 40px;
+    align-self: flex-end;
+    color: #adf270;
+    text-shadow: $sombraLogo;
+    margin-top: 20px;
+}
+
+@mixin fondoHeader {
+  background: #DAD299;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B0DAB9, #DAD299); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+}
+
+#contPrincipal{
+    margin: 0;
+    padding: 0;
+}
+
+
+

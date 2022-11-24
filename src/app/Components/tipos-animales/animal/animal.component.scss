@@ -1,0 +1,63 @@
+@mixin fondo {
+  background: #7F7FD5; 
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+}
+
+.card {
+  width: 50%;
+  margin: auto;
+  @include fondo();
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 540px) {
+    width: 100%;  
+}
+@media screen and (min-width: 541px) and (max-width: 767px) {
+  width: 75%;
+  
+}
+  .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 50px;
+      height: 50px;
+      align-self: flex-start;
+    }
+
+    h1 {
+      margin-top: -40px;
+    }
+  }
+
+  div {
+    overflow: hidden;
+
+    &:hover>img {
+      transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      transition: all .5s ease-in-out;
+    }
+  }
+
+}
+
+.regresar{
+  @include fondo();
+  color: #FBFCFC;
+  &:hover{
+    color: #000000;
+  }
+}

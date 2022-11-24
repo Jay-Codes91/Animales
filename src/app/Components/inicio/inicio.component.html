@@ -1,0 +1,142 @@
+<div>
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+
+  <div class="carousel-inner" data-bs-interval="5000">
+    <div class="carousel-item active" *ngFor="let item of animalesCarousel">
+      <img src="{{todosAnimales[item].IMG}}" class="d-block w-100 img-fluid" style="height: 500px;" alt="{{todosAnimales[item].nombre}}">
+      <div class="carousel-caption">
+        <h1 class="lobs mat-typography" style="font-size: 40px;">{{todosAnimales[item].nombre}}</h1>
+        <h1 class="lobs mat-typography"><em>({{todosAnimales[item].nombreCientifico}})</em></h1>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000" *ngFor="let item of animalesCarousel2">
+      <img src="{{todosAnimales[item].IMG}}" class="d-block w-100 img-fluid" style="height: 500px;" alt="{{todosAnimales[item].nombre}}">
+      <div class="carousel-caption">
+        <h1 class="lobs mat-typography" style="font-size: 40px;">{{todosAnimales[item].nombre}}</h1>
+        <h1 class="lobs mat-typography"><em>({{todosAnimales[item].nombreCientifico}})</em></h1>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000" *ngFor="let item of animalesCarousel3">
+      <img src="{{todosAnimales[item].IMG}}" class="d-block w-100 img-fluid" style="height: 500px;" alt="{{todosAnimales[item].nombre}}">
+      <div class="carousel-caption">
+        <h1 class="lobs mat-typography" style="font-size: 40px;">{{todosAnimales[item].nombre}}</h1>
+        <h1 class="lobs mat-typography"><em>({{todosAnimales[item].nombreCientifico}})</em></h1>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000" *ngFor="let item of animalesCarousel4">
+      <img src="{{todosAnimales[item].IMG}}" class="d-block w-100 img-fluid" style="height: 500px;" alt="{{todosAnimales[item].nombre}}">
+      <div class="carousel-caption">
+        <h1 class="lobs mat-typography" style="font-size: 40px;">{{todosAnimales[item].nombre}}</h1>
+        <h1 class="lobs mat-typography"><em>({{todosAnimales[item].nombreCientifico}})</em></h1>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000" *ngFor="let item of animalesCarousel5">
+      <img src="{{todosAnimales[item].IMG}}" class="d-block w-100 img-fluid" style="height: 500px;" alt="{{todosAnimales[item].nombre}}">
+      <div class="carousel-caption">
+        <h1 class="lobs mat-typography" style="font-size: 40px;">{{todosAnimales[item].nombre}}</h1>
+        <h1 class="lobs mat-typography"><em>({{todosAnimales[item].nombreCientifico}})</em></h1>
+      </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"
+      title="Anterior">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"
+      title="Siguiente">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<br><br>
+
+<!--------------------------------------------------------------------------------------------->
+<h1 id="tit" class="lobs mat-display-3 text-center text-uppercase mat-display-3 mat-typography">Algunas especies de animales</h1>
+
+<div class="accordion" id="animales">
+  <div class="accordion-item" *ngFor="let item of animalesAleatorios">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="120" width="100"> &nbsp;&nbsp;{{todosAnimales[item].nombre}}
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <div class="text-center">
+          <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="250" width="250">
+       </div>
+       <br>
+        <h1><b>Descripción: </b>{{todosAnimales[item].descripcion}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" *ngFor="let item of animalesAleatorios2">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="120" width="100"> &nbsp;&nbsp;{{todosAnimales[item].nombre}}
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+        <div class="text-center">
+           <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="250" width="250">
+        </div>
+        <br>
+        <h1><b>Descripción: </b>{{todosAnimales[item].descripcion}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" *ngFor="let item of animalesAleatorios3">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="120" width="100"> &nbsp;&nbsp;{{todosAnimales[item].nombre}}
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <div class="text-center">
+          <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="250" width="250">
+       </div>
+       <br>
+        <h1><b>Descripción: </b>{{todosAnimales[item].descripcion}}</h1>
+      </div>
+    </div>
+    <div class="accordion-item" *ngFor="let item of animalesAleatorios4">
+      <h2 class="accordion-header" id="panelsStayOpen-headingfour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="120" width="100"> &nbsp;&nbsp;{{todosAnimales[item].nombre}}
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapsefour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfour">
+        <div class="accordion-body">
+          <div class="text-center">
+            <img src="{{todosAnimales[item].IMG}}" class="rounded-circle img-fluid" alt="{{todosAnimales[item].nombre}}" height="250" width="250">
+         </div>
+         <br>
+          <h1><b>Descripción: </b>{{todosAnimales[item].descripcion}}</h1>
+        </div>
+      </div>
+  </div>
+</div>
+<br><br>
+
+
+
